@@ -1,3 +1,4 @@
+import 'package:employee_attendance/screens/register_screen.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -81,7 +82,17 @@ class _LoginScreenState extends State<LoginScreen> {
                         borderRadius: BorderRadius.circular(30)
                       )
                     ), child: const Text("LOGIN", style: TextStyle(fontSize: 20, color: Colors.white),),),
-                )
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                TextButton(onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const RegisterScreen()));
+                },
+                    child: const Text("Are you a new Employee ? Register here"))
               ],
             ),
           )
